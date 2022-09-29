@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from './Components/Footer';
+import VideoTag from './Components/Home1';
+import DiffPlatforms from './Components/Home2';
+import SlidePage from './Components/Home3';
+import TeamSection from './Components/Home4';
+import Colorful from './Components/Home5';
+import Unification from './Components/Home6';
+import Navbar from './Components/Navbar';
+import AllRoutes from './Pages/AllRoutes';
+import Discussion from './Pages/Discussion';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <AllRoutes />
+      
+      <h2>App.js</h2>
+      <VideoTag />
+      <DiffPlatforms />
+      <SlidePage />
+      <TeamSection />
+      <Colorful />
+      <Unification />
+      <Footer />
     </div>
   );
 }
