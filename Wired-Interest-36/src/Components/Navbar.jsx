@@ -18,6 +18,10 @@ function Navbar () {
     return (
         <Container maxW="100%"
         boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
+        position="sticky"
+        top="0"
+        zIndex="4"
+        background="white"
         >
             <Flex h="62px">
              <Center>  
