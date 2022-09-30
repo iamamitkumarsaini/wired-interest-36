@@ -9,7 +9,15 @@ function SlidePage() {
 
 
     return (
-        <Container minW="82%" m="auto" pt="15px" mb="170px" mt="50px" boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" borderRadius="12px" bg="#cdf0ff">
+
+
+        <Container minW="100%" >
+
+             <Text mt="90px" mb="50px" letterSpacing="1px" color="#8B99AD" fontWeight="500">SAY GOODBYE TO STATUS MEETINGS</Text>
+
+
+        <Container minW="84%" m="auto" pt="15px" mb="170px" mt="50px" boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" borderRadius="12px" bg="#cdf0ff">
+
             <Container mb="10px" mt="50px">
                 <Stack flexDirection="row" minW="2xl">
 
@@ -52,7 +60,7 @@ function SlidePage() {
                    <Center><Box><Text fontWeight="500">Try Nifty now. Thank us later <ChevronRightIcon boxSize="27px" /> </Text></Box></Center>
                 </HStack>
             </Container>
-
+            </Container>
         </Container>
     )
 }

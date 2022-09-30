@@ -8,7 +8,7 @@ function Footer () {
 
     return (
 
-        <Flex w="100%" backgroundColor="#FAF9F6" flexDirection="column">
+        <Flex w="100%" backgroundColor="#f2f6fb" flexDirection="column">
         <Flex w="82%" m="auto" mt="50px" mb="50px" justify="space-around">
 
 

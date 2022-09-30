@@ -6,24 +6,18 @@ import SlidePage from './Components/Home3';
 import TeamSection from './Components/Home4';
 import Colorful from './Components/Home5';
 import Unification from './Components/Home6';
+import RotatingDIvs from './Components/Home7';
+import SignupBox from './Components/Home8';
+import WaveLine from './Components/Home9';
 import Navbar from './Components/Navbar';
 import AllRoutes from './Pages/AllRoutes';
 import Discussion from './Pages/Discussion';
+import Home from './Pages/Home';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <AllRoutes />
-      
-      <h2>App.js</h2>
-      <VideoTag />
-      <DiffPlatforms />
-      <SlidePage />
-      <TeamSection />
-      <Colorful />
-      <Unification />
-      <Footer />
+       <AllRoutes />
     </div>
   );
 }
