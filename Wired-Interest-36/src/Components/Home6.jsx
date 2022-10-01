@@ -5,7 +5,7 @@ function Unification () {
 
     return (
 
-        <Container minW="84%" m="auto" mb="170px">
+        <Container minW="84%" m="auto" mb="160px">
             <Text fontSize='15px' fontWeight="600" color="#8B99AD" letterSpacing="2px">POWERFUL UNIFICATION</Text>
 
             <Container minW="100%" bg="rgba(204,240,235,0.25)" mt="50px" borderRadius="20px">

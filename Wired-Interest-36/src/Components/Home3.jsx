@@ -9,7 +9,15 @@ function SlidePage() {
 
 
     return (
-        <Container minW="82%" m="auto" pt="15px" mb="170px" mt="50px" boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" borderRadius="12px" bg="#cdf0ff">
+
+
+        <Container minW="100%" >
+
+             <Text mt="90px" mb="50px" letterSpacing="1px" color="#8B99AD" fontWeight="500">SAY GOODBYE TO STATUS MEETINGS</Text>
+
+
+        <Container minW="84%" m="auto" pt="15px" mb="170px" mt="50px" boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" borderRadius="18px" bg="#cdf0ff">
+
             <Container mb="10px" mt="50px">
                 <Stack flexDirection="row" minW="2xl">
 
@@ -36,7 +44,6 @@ function SlidePage() {
                 <Heading>Set Goals & Timelines</Heading>
                <Flex>
                 <Center><Text p="15px">Set a visual timeline for your big-picture goals and build team alignment by automating progress as tasks are completed. <Link color="#06BAAB">Learn more<ChevronRightIcon boxSize="30px" /></Link></Text></Center>
-               <Text color="#06BAAB" position="absolute" ml="595px" mt="48px">   </Text>
                </Flex>
             </Container>
 
@@ -46,15 +53,16 @@ function SlidePage() {
             
             <Divider />
 
-            <Container minW="103%" bg="#ffffff" boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" ml="-1.5%" borderRadius="10px" _hover={links} color="#06BAAB">
-                <HStack ml="37%" p="12px">
-                   <Center><Box boxSize="20px" mr="10px"><Image src="https://niftypm.com/_nuxt/img/nifty-logo-compact.ab551d5.svg" alt="logo" /></Box></Center>
-                   <Center><Box><Text fontWeight="500">Try Nifty now. Thank us later <ChevronRightIcon boxSize="27px" /> </Text></Box></Center>
+            <Container minW="103.5%" bg="#ffffff" boxShadow="rgba(0, 0, 0, 0.16) 0px 1px 4px" ml="-1.5%" _hover={links} color="#06BAAB" borderBottomRadius="18px">
+            <Center><HStack ml="37%" p="12px">
+                   <Box boxSize="20px" mr="10px"><Image src="https://niftypm.com/_nuxt/img/nifty-logo-compact.ab551d5.svg" alt="logo" /></Box>
+                  <Box><Text fontWeight="500">Try Nifty now. Thank us later <ChevronRightIcon boxSize="27px" /> </Text></Box>
                 </HStack>
+                </Center>
             </Container>
-
+            </Container>
         </Container>
     )
 }
 
-export default SlidePage
+export default SlidePage;
