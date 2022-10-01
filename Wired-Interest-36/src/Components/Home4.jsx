@@ -1,5 +1,8 @@
 import { Box, Center, Container, Heading, Image, List, ListIcon, ListItem, Stack, Text, VStack } from "@chakra-ui/react";
 import { MdCheckCircle } from "react-icons/md";
+
+
+
 function TeamSection () {
 
     const clr = {color:"#06BAAB", cursor:"pointer"}
