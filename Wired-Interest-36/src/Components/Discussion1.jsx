@@ -19,12 +19,12 @@ function DiscussionPageTop () {
 
     return (
 
-        <Container minW="100%" bg="#f2f6fb" mb="70px">
+        <Container minW="100%" bg="#f2f6fb" mb="85px">
             <Box pt="95px" pb="25px">
             <Badge color="white" bg="#8DD7FF" borderRadius="12px" p="1" fontSize="12px" pl="18px" pr="18px" colorScheme="blue">@ Discussions</Badge>
             </Box>
 
-            <Container border="1px solid red">
+            <Container>
                 <Heading fontSize="36px" mb="10px">Establish knowledge hubs</Heading>
                 <Text pl="20px" pr="20px" fontSize="16px" fontWeight="500">Discussions enable focused collaboration amongst project members to facilitate meaningful decision making.</Text>
             </Container>
