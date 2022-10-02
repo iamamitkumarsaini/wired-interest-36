@@ -9,22 +9,20 @@ import SignupBox from "../Components/Home8";
 import WaveLine from "../Components/Home9";
 import Navbar from "../Components/Navbar";
 
-
-
 function Discussion () {
 
     return(
         <div>
-            <Navbar />
-            <DiscussionPageTop />
-            <FacilitesSection />
-            <DiffPlatforms />
-            <MoreWithDiscussion />
-            <RotatingDIvs />
-            <Unification />
-            <SignupBox />
-            <WaveLine />
-            <Footer />
+           <Navbar />
+           <DiscussionPageTop />
+           <FacilitesSection />
+           <DiffPlatforms />
+           <MoreWithDiscussion />
+           <RotatingDIvs />
+           <Unification />
+           <SignupBox />
+           <WaveLine />
+           <Footer />
         </div>
     )
 }

@@ -21,7 +21,7 @@ function VideoTag () {
       
 
     return (
-        <Flex bg="#F8F8F8" flexDirection="column" mb="80px">
+        <Flex bg="#F8F8F8" flexDirection="column" mb="110px">
         <Container  minW="-webkit-fit-content" borderRadius="16px" bg="#F0F0F0" mt="25px">
             <Box>
                 <Center><Image position="relative" minW="748px" maxH="280px" m="16px auto" src="https://niftypm.com/_nuxt/img/large@1x.8a3e5ad.webp" alt="hover_on" /></Center>
@@ -34,10 +34,7 @@ function VideoTag () {
         <ModalOverlay />
         <ModalContent minW="848px" minH="465px" mt="146px">
           <ModalBody >
-          {/* <AspectRatio ratio={16 / 9}>
-                <iframe width="848" minHeight="460" src="https://www.youtube.com/embed/5GaV5EZX22o" 
-                title="YouTube video player" style={links}></iframe>
-                </AspectRatio> */}
+
 
 
           <Box
@@ -49,8 +46,6 @@ function VideoTag () {
           >
 
           </Box>
-
-
 
           </ModalBody>
         </ModalContent>
@@ -89,7 +84,7 @@ function VideoTag () {
 
        <Divider />
 
-       <Container _hover={gBtn} minW="xl" mt="20px" boxShadow="rgba(0, 0, 0, 0.16) 0px 1px 4px" borderRadius="8px" mb="10px">
+       <Container _hover={gBtn} minW="xl" mt="20px" boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px" borderRadius="8px" mb="10px">
          <Box alignContent="center" p="15px" ml="28%">
             <Flex>
               <Box boxSize="18px" mr="18px">

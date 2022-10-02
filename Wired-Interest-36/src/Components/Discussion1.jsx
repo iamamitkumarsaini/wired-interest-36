@@ -20,7 +20,7 @@ function DiscussionPageTop () {
     return (
 
         <Container minW="100%" bg="#f2f6fb" mb="85px">
-            <Box pt="95px" pb="25px">
+            <Box pt="110px" pb="25px">
             <Badge color="white" bg="#8DD7FF" borderRadius="12px" p="1" fontSize="12px" pl="18px" pr="18px" colorScheme="blue">@ Discussions</Badge>
             </Box>
 

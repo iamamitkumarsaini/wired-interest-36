@@ -54,11 +54,11 @@ function SlidePage() {
             <Divider />
 
             <Container minW="103.5%" bg="#ffffff" boxShadow="rgba(0, 0, 0, 0.16) 0px 1px 4px" ml="-1.5%" _hover={links} color="#06BAAB" borderBottomRadius="18px">
-            <Center><HStack ml="37%" p="12px">
+            <HStack ml="37%" p="12px">
                    <Box boxSize="20px" mr="10px"><Image src="https://niftypm.com/_nuxt/img/nifty-logo-compact.ab551d5.svg" alt="logo" /></Box>
                   <Box><Text fontWeight="500">Try Nifty now. Thank us later <ChevronRightIcon boxSize="27px" /> </Text></Box>
                 </HStack>
-                </Center>
+               
             </Container>
             </Container>
         </Container>

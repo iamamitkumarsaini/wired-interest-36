@@ -1,8 +1,5 @@
 import { Box, Center, Container, Heading, Image, List, ListIcon, ListItem, Stack, Text, VStack } from "@chakra-ui/react";
 import { MdCheckCircle } from "react-icons/md";
-
-
-
 function TeamSection () {
 
     const clr = {color:"#06BAAB", cursor:"pointer"}
@@ -61,12 +58,12 @@ function TeamSection () {
                 </ListItem>
 
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={MdCheckCircle} color='#06BAAB' />
                 Custom development workflows with if/then rules
             </ListItem>
 
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={MdCheckCircle} color='#06BAAB' />
                 Manage issues, bugs, and changes directly in one place
             </ListItem>
 
