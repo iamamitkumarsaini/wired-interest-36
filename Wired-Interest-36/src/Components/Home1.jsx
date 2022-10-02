@@ -1,6 +1,7 @@
 import { AspectRatio, Box, Center, useDisclosure, Container, Flex, Image, Modal, ModalBody, ModalContent, ModalOverlay, Text, Heading, Input, Button, Divider } from "@chakra-ui/react";
 import { FaPlay } from "react-icons/fa";
 import React, {useState} from "react"
+import { useNavigate } from "react-router-dom";
 
 function VideoTag () {
 
@@ -9,6 +10,7 @@ function VideoTag () {
     const amit = {backgroundColor:"#00BAAB", color:"white",cursor:"pointer"};
     const [text, setText] = useState("");
     const gBtn = {color:"#00BAAB", cursor:"pointer"};
+    const navigate = useNavigate();
 
 
     const handleChange = (e) => {
@@ -16,7 +18,7 @@ function VideoTag () {
     }
 
     const handleClick = () => {
-      alert(text);
+      navigate("/signup")
     }
       
 

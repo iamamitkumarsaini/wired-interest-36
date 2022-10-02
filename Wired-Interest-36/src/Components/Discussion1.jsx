@@ -1,19 +1,20 @@
 import { useState } from "react";
 import { Box, Button, Center, Container, Flex, Heading, Image, Input, Text } from "@chakra-ui/react";
 import { Badge } from '@chakra-ui/react'
+import { useNavigate } from "react-router-dom";
 
 function DiscussionPageTop () {
 
     const [text, setText] = useState("");
     const logo = {cursor:"pointer"};
-
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         setText(e.target.value)
       }
   
       const handleClick = () => {
-        console.log(text);
+        navigate("/signup")
       }
        
 

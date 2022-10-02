@@ -2,20 +2,20 @@ import { Box, Button, Container, Divider, FormControl, FormLabel, Heading, HStac
 import { useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Context/AuthContext";
-import axios from "axios";
+// import axios from "axios";
 
 
-   const takeUserData = async(obj) => {
+  //  const takeUserData = async(obj) => {
 
-    try {
-      let res = await axios.post(`http://localhost:3004/userprofile`,obj)
-      return res
-    } 
+  //   try {
+  //     let res = await axios.post(`http://localhost:3004/userprofile`,obj)
+  //     return res
+  //   } 
     
-    catch (error) {
-     console.log("error",error); 
-    }
-   }
+  //   catch (error) {
+  //    console.log("error",error); 
+  //   }
+  //  }
 
 
 function SignupData () {
@@ -28,21 +28,18 @@ function SignupData () {
 
   let arr = JSON.parse(localStorage.getItem("SignupDetails")) || []
 
-console.log(obj)
+// const userData = async (obj) => {
 
-
-const userData = async (obj) => {
-
-  try {
+//   try {
     
-    let res = await takeUserData(obj) 
-    console.log(res)
-  } 
+//     let res = await takeUserData(obj) 
+//     console.log(res)
+//   } 
   
-  catch (error) {
-   console.log() 
-  }
-}
+//   catch (error) {
+//    console.log() 
+//   }
+// }
 
   const submitSignup = () => {
 
@@ -50,17 +47,18 @@ const userData = async (obj) => {
     obj.password=password;
     obj.number=number;
 
-    console.log(name,number,password)
     setName("")
     setPassword("")
     setNumber("")
+
+
   navigate("/login")
 
   arr.push(obj);
 
   localStorage.setItem("SignupDetails", JSON.stringify(arr))
 
-  userData(obj)
+  // userData(obj)
 
 
   }
@@ -112,7 +110,7 @@ const userData = async (obj) => {
             onChange={(e) => setPassword(e.target.value) } />
 
            <FormLabel fontSize="14px" color="#CFD0DA" mt="18px">Phone Number</FormLabel>
-           <Input name="name" type='number' placeholder="Enter phone number" fontSize="14px" bgColor="#242432" outline="false"
+           <Input name="name" type='number' placeholder="Enter 10 digits phone number" fontSize="14px" bgColor="#242432" outline="false"
             value={number}
             onChange={(e) => setNumber(e.target.value) } />
 
@@ -130,7 +128,9 @@ const userData = async (obj) => {
 </FormControl>
 
          <Box>
-         <Button ml="40%" minWidth="60%" mt="25px" color="#CFD0DA" bgColor="#06BAAB" onClick={submitSignup}>Sign Up</Button>
+         <Button ml="40%" minWidth="60%" mt="25px" color="#CFD0DA" bgColor="#06BAAB"
+         disabled={name=="" || password=="" || password.length<6 || number=="" || number.length!==10}
+         onClick={submitSignup}>Sign Up</Button>
          </Box>
 
         

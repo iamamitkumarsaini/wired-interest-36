@@ -27,6 +27,20 @@
       "password": "asdfghjkl",
       "number": "1234567890",
       "id": 4
+    },
+    {
+      "email": "amitmali67711@gmail.com",
+      "name": "Amit",
+      "password": "1234567",
+      "number": "135353243423",
+      "id": 5
+    },
+    {
+      "email": "amitmali67711@gmail.com",
+      "name": "Amit Kumar Saini",
+      "password": "asdfghjkl",
+      "number": "1234567890",
+      "id": 6
     }
   ]
 }

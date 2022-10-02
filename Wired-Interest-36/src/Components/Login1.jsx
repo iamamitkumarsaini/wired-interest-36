@@ -7,8 +7,35 @@ import {useState} from "react"
 
 function LoginPage () {
 
-    const [loginObj, setLoginObj] = useState({email:"", password:""})
-    const {email,password} = loginObj
+    const [loginObj, setLoginObj] = useState({email:"", password:""});
+
+    let arr = JSON.parse(localStorage.getItem("SignupDetails")) || []
+    const {email,password} = loginObj;
+   
+
+      let flag=false;
+
+    const LoginFunc = () => {
+    
+        arr.filter((elem) => {
+            if (loginObj.email==elem.email && loginObj.password==elem.password){
+    
+                
+                flag=true;
+            }
+           
+        })
+
+        if(flag){
+            alert("loginSuccessfull")
+            navigate("/")
+        }
+
+        else{
+            alert("Login Failed")
+        }
+    }
+   
 
 
     const signupBtn = {color:"#06BAAB"}
@@ -18,14 +45,32 @@ function LoginPage () {
     const handleLoginData = (e) => {
         const {name,value} = e.target
 
-        setLoginObj({...{loginObj}, [name]:value})
+        setLoginObj({...loginObj, [name]:value})
     }
 
     const handlSignup = () => {
         navigate("/signup")
+        
       
     }
 
+    const loginSubmit = () => {
+        // navigate("/")
+        console.log(loginObj)
+        LoginFunc()
+    }
+
+
+
+
+
+
+
+
+
+
+    
+    
 
     return <Container
          minW="100%"
@@ -80,7 +125,10 @@ function LoginPage () {
                   />
                 </FormControl>
 
-                <Button  fontWeight="500" fontSize="16px" bg="#009084" color="#8e94bb" _hover="none"> Log in</Button>
+                <Button  fontWeight="500" fontSize="16px" bg="#06BAAB" color="#fff" _hover="none"
+                disabled = {!email.includes("@")  || !email.includes(".co") || password.length<6}
+                onClick={loginSubmit}
+                > Log in</Button>
 
                 <HStack pt="15px" justify="center" color="#F57D2C">
                   

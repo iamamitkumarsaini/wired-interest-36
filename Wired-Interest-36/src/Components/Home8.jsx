@@ -1,18 +1,21 @@
 import { Box, Button, Center, Container, Divider, Flex, Heading, HStack, Image, Input, Text } from "@chakra-ui/react";
 import React, {useState} from "react"
+import { useNavigate } from "react-router-dom";
+
 
 function SignupBox () {
 
     const gBtn = {color:"#00BAAB", cursor:"pointer"};
     const logo = {cursor:"pointer"};
     const [text, setText] = useState("");
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         setText(e.target.value)
       }
   
       const handleClick = () => {
-        alert(text);
+        navigate("/signup")
       }
        
 
