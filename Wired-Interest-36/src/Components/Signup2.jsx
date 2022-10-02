@@ -1,7 +1,15 @@
 import { Box, Button, Container, Divider, FormControl, FormLabel, Heading, HStack, Input, Select, Stack, Text } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 
 function SignupData () {
+
+  const navigate = useNavigate()
+
+  const submitSignup = () => {
+
+  navigate("/")
+  }
 
     return (
         <Container minW="100%" color="white" bgColor="#242432">
@@ -61,7 +69,7 @@ function SignupData () {
 </FormControl>
 
          <Box>
-         <Button ml="40%" minWidth="60%" mt="25px" color="#CFD0DA" bgColor="#06BAAB">Next</Button>
+         <Button ml="40%" minWidth="60%" mt="25px" color="#CFD0DA" bgColor="#06BAAB" onClick={submitSignup}>Sign Up</Button>
          </Box>
 
         
