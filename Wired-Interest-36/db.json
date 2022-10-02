@@ -1,6 +1,32 @@
 {
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
-    ]
+  "userprofile": [
+    {
+      "id": 1,
+      "name": "amit saini",
+      "email": "amitsaini@gmail.com",
+      "password": "amit1234",
+      "number": "9828967711"
+    },
+    {
+      "email": "amitmali67711@gmail.com",
+      "name": "amit saini",
+      "password": "aaaqqq",
+      "number": "1231231234",
+      "id": 2
+    },
+    {
+      "email": "bheru@gmail.com",
+      "name": "bheru",
+      "password": "asdfghjk",
+      "number": "1231231234",
+      "id": 3
+    },
+    {
+      "email": "amitmali98289@gmail.com",
+      "name": "amit",
+      "password": "asdfghjkl",
+      "number": "1234567890",
+      "id": 4
+    }
+  ]
 }
-  

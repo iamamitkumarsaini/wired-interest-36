@@ -1,14 +1,26 @@
 import { Badge, Box, Button, Center, Container, Divider, Heading, HStack, Image, Input, Stack, Text } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
+import { AuthContext } from "../Context/AuthContext";
 
 
 function SignupPage () {
 
+    const {obj,setObj} = useContext(AuthContext);
+    const [email, setEmail] = useState("")
+
     const logo = {cursor:"pointer"};
     const navigate = useNavigate()
 
-    const handleClick = () => {
+    const signupMail = (e) => {
 
+        setEmail(e.target.value)
+       
+    }
+
+    const handleClick = () => {
+        obj.email=email;
+        setEmail("")
         navigate("/signup/profile");
     }
 
@@ -44,8 +56,11 @@ function SignupPage () {
 
            <Container>
           <HStack spacing="21px">
-          <Input maxW="380px" name="email" type="email" placeholder="Enter email..." outline="false" bgColor="#242432" color="#8E94BB" borderColor="red" />
-          <Button _hover="none" bgColor="#06BAAB" pl="32px" fontSize="16px" pr="32px" borderRadius="4px" onClick={handleClick} >Get Started</Button>
+          <Input maxW="380px" name="email" type="email" placeholder="Enter email..." 
+          outline="false" bgColor="#242432" color="#8E94BB" borderColor="red"
+          value={email} onChange={signupMail}
+          />
+          <Button disabled={!email.includes(".co") || !email.includes("@")} _hover="none" bgColor="#06BAAB" pl="32px" fontSize="16px" pr="32px" borderRadius="4px" onClick={handleClick} >Get Started</Button>
           </HStack>
           <Text textAlign="left" fontSize="16px">Free Forever. No Credit Card Required.</Text>
            </Container>

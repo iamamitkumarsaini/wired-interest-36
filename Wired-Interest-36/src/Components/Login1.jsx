@@ -1,12 +1,25 @@
 import { Badge, Box, Center, Container, Heading, HStack, Image, Stack, Text, VStack, FormControl, FormLabel, FormErrorMessage, FormHelperText, Input, Button, Divider, } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import {useState} from "react"
+
+
 
 function LoginPage () {
+
+    const [loginObj, setLoginObj] = useState({email:"", password:""})
+    const {email,password} = loginObj
+
 
     const signupBtn = {color:"#06BAAB"}
     const hoverEffect = {cursor:"pointer",textDecoration:"underline"};
     const navigate = useNavigate()
+
+    const handleLoginData = (e) => {
+        const {name,value} = e.target
+
+        setLoginObj({...{loginObj}, [name]:value})
+    }
 
     const handlSignup = () => {
         navigate("/signup")
@@ -49,14 +62,22 @@ function LoginPage () {
 
                 <FormControl color="#CFD0DA" pb="14px" >
                    <FormLabel fontSize="15px">Email address *</FormLabel>
-                   <Input border="none" outline="disabled" borderRadius="5px" fontSize="15px" bgColor="#242432" name="email" type='email' placeholder="name@company.com" />
+                   <Input border="none" outline="disabled" borderRadius="5px" fontSize="15px" bgColor="#242432" name="email"
+                    type='email' placeholder="name@company.com"
+                    value={email}
+                    onChange={handleLoginData}
+                    />
                    
 
                   <HStack mt="20px" justify="space-between">
                   <FormLabel fontSize="15px">Password *</FormLabel>
                   <FormLabel pb="9px" fontSize="14px" color="#8E94BB" >Forget Password?</FormLabel>
                   </HStack>
-                  <Input border="none" outline="false" borderRadius="5px" fontSize="15px" bgColor="#242432" name="password" type='password' placeholder="Password" />
+                  <Input border="none" outline="false" borderRadius="5px" fontSize="15px" bgColor="#242432" 
+                  name="password" type='password' placeholder="Password" 
+                  value={password}
+                    onChange={handleLoginData}
+                  />
                 </FormControl>
 
                 <Button  fontWeight="500" fontSize="16px" bg="#009084" color="#8e94bb" _hover="none"> Log in</Button>

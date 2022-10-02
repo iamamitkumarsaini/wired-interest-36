@@ -1,14 +1,68 @@
 import { Box, Button, Container, Divider, FormControl, FormLabel, Heading, HStack, Input, Select, Stack, Text } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
+import { AuthContext } from "../Context/AuthContext";
+import axios from "axios";
+
+
+   const takeUserData = async(obj) => {
+
+    try {
+      let res = await axios.post(`http://localhost:3004/userprofile`,obj)
+      return res
+    } 
+    
+    catch (error) {
+     console.log("error",error); 
+    }
+   }
 
 
 function SignupData () {
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const {obj,setObj} = useContext(AuthContext);
+  const [name,setName] = useState("")
+  const [password, setPassword] = useState("");
+  const [number, setNumber] = useState("");
+
+  let arr = JSON.parse(localStorage.getItem("SignupDetails")) || []
+
+console.log(obj)
+
+
+const userData = async (obj) => {
+
+  try {
+    
+    let res = await takeUserData(obj) 
+    console.log(res)
+  } 
+  
+  catch (error) {
+   console.log() 
+  }
+}
 
   const submitSignup = () => {
 
-  navigate("/")
+    obj.name=name;
+    obj.password=password;
+    obj.number=number;
+
+    console.log(name,number,password)
+    setName("")
+    setPassword("")
+    setNumber("")
+  navigate("/login")
+
+  arr.push(obj);
+
+  localStorage.setItem("SignupDetails", JSON.stringify(arr))
+
+  userData(obj)
+
+
   }
 
     return (
@@ -47,13 +101,20 @@ function SignupData () {
            <FormControl>
 
            <FormLabel fontSize="14px" color="#CFD0DA">Full Name</FormLabel>
-           <Input name="name" type='text' placeholder="Your first & last name..." fontSize="14px" bgColor="#242432" outline="false" />
+           <Input name="name" type='text' placeholder="Your first & last name..." fontSize="14px" bgColor="#242432" outline="false"
+           value={name}
+           onChange={(e) => setName(e.target.value) }
+           />
 
            <FormLabel fontSize="14px" color="#CFD0DA" mt="18px">Create Password</FormLabel>
-           <Input name="name" type='text' placeholder="Minimum 6 characters" fontSize="14px" bgColor="#242432" outline="false" />
+           <Input name="name" type='password' placeholder="Minimum 6 characters" fontSize="14px" bgColor="#242432" outline="false"
+            value={password}
+            onChange={(e) => setPassword(e.target.value) } />
 
            <FormLabel fontSize="14px" color="#CFD0DA" mt="18px">Phone Number</FormLabel>
-           <Input name="name" type='text' placeholder="Enter phone number" fontSize="14px" bgColor="#242432" outline="false" />
+           <Input name="name" type='number' placeholder="Enter phone number" fontSize="14px" bgColor="#242432" outline="false"
+            value={number}
+            onChange={(e) => setNumber(e.target.value) } />
 
            {/* <FormLabel fontSize="14px" color="#CFD0DA" mt="18px">Your Role</FormLabel>
            <Select placeholder='Select Work Role' bgColor="#242432" outline="false" color="black" textShadow=" 0 1px 0 rgba(0, 0, 0, 0.4)">
