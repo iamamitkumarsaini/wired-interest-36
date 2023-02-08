@@ -26,7 +26,7 @@ different industries and businesses, making it an ideal solution for teams of an
 ![Discussion Page](https://user-images.githubusercontent.com/107475338/217646124-1d4909b2-acf1-4bf0-8df3-f76af824d098.png)
 
 
-### Sign-In Page
+### Sign-Up Page
 ![SignupPage](https://user-images.githubusercontent.com/107475338/217646255-7cc31b3e-adcf-47b6-9225-6ef0934d5eb5.png)
 
 
