@@ -1,6 +1,6 @@
 # Nifty PM Website Clone
 ```
-It provides a user-friendly platform for teams to plan, track, and manage their projects efficiently.
+This Website provides a user-friendly platform for teams to plan, track, and manage their projects efficiently.
 ```
 
 
