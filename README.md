@@ -1,6 +1,6 @@
 # Nifty PM Website Clone
 ```
-Nifty PM is a project management website that provides a user-friendly platform for teams to plan, track, and manage their projects efficiently.
+It provides a user-friendly platform for teams to plan, track, and manage their projects efficiently.
 ```
 
 
